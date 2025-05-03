@@ -1,0 +1,69 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;  /* Color al pasar el mouse */
+}
+
+/* Contenedor animación */
+.image-animation-container {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.slide-in-right {
+    animation: slideInRight 1s ease-out;
+    position: absolute;
+    width: 50%;
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease-out;
+    position: absolute;
+    width: 50%;
+    left: 50%;
+}
